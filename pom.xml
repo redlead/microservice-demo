@@ -45,6 +45,7 @@
         <module>user-service</module>
         <module>task-service</module>
         <module>report-service</module>
+        <module>zuul-server</module>
     </modules>
 
 </project>
