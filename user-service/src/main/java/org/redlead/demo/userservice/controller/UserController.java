@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
@@ -21,4 +23,11 @@ public class UserController {
     User getOneByKey(@PathVariable String key) {
         return userService.findOneByKey(key);
     }
+
+    @RequestMapping(path = "", method = GET, produces = APPLICATION_JSON_UTF8_VALUE)
+    List<User> getAll() {
+        return userService.findAll();
+    }
+
+
 }
