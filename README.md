@@ -13,6 +13,33 @@ Project demonstrates String Boot Microservice architecture.
 | `task-service`   | Task database REST API service | http://localhost:9120 |
 | `report-service` | Report REST API service        | http://localhost:9130 |
 
+### Eureka Discovery Server
+
+Module `eureka-server` implements Discovery Service. This is a very simple
+project with the powerfull Eureka library. You can read the documentation at
+https://cloud.spring.io/spring-cloud-netflix/ 
+
+### Spring Boot Admin Server
+
+Module `admin-server` implements Admin UI where you can see all running
+Spring Boot application of the project. This is also a very simple project.
+Read the documentation at https://github.com/codecentric/spring-boot-admin
+Admin Server uses Eureka to get the application list.
+
+### Zuul API Gateway Server
+
+Module `zuul-server` imlements API Gateway. This is a simple project again :)
+Read the documentation at https://github.com/Netflix/zuul
+
+API Gateway configured to proxy all methods of all microservices modules
+of the project. 
+
+| Endpoint              | Microservice     |
+| --------------------- | ---------------- |
+| `/api/user-service`   | `user-service`   |
+| `/api/task-service`   | `user-service`   |
+| `/api/report-service` | `report-service` |
+
 ### User database REST API service
 
 Module `user-service` used to access user database. In-memory H2 database used.
