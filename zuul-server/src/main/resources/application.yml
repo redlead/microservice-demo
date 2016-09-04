@@ -5,6 +5,9 @@ spring:
 server:
   port: 9000
 
+logging:
+    file: logs/zuul-server.log
+
 eureka:
   client:
     serviceUrl:

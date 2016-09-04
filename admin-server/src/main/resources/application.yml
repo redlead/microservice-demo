@@ -1,12 +1,12 @@
 spring:
   application:
-     name: report-service
+     name: admin-server
 
 server:
-  port: 9130
+  port: 9090
 
 logging:
-    file: logs/report-service.log
+    file: logs/admin-server.log
 
 eureka:
   client:

@@ -5,6 +5,9 @@ spring:
 server:
   port: 9110
 
+logging:
+    file: logs/user-service.log
+
 eureka:
   client:
     serviceUrl:

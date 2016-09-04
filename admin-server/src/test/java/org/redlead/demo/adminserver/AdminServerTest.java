@@ -1,4 +1,4 @@
-package org.redlead.demo.eurekaservice;
+package org.redlead.demo.adminserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EurekaServiceTest {
+public class AdminServerTest {
 
     @Test
     public void contextLoads() {

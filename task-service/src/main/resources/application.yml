@@ -5,6 +5,9 @@ spring:
 server:
   port: 9120
 
+logging:
+    file: logs/task-service.log
+
 eureka:
   client:
     serviceUrl:
