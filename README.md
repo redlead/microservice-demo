@@ -117,8 +117,11 @@ Example of 'All tasks report' data
 
 Module uses Discovery Service to call other microservices.
 ```java
+...
 // get all tasks
-ResponseEntity<Task[]> responseEntity = restTemplate.getForEntity("http://TASK-SERVICE/task", Task[].class);
+ResponseEntity<Task[]> responseEntity 
+   restTemplate.getForEntity("http://TASK-SERVICE/task", Task[].class);
+...
 ```
 
 ## How to build
