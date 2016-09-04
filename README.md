@@ -2,11 +2,17 @@
 
 Project demonstrates String Boot Microservice architecture.
 
-Modules of project are Spring Boot applications:
-* Eureka Discovery Server with Spring Boot Admin UI
-* User service implements REST API for user database
-* Task service implements REST API for task database
-* Report service implements REST API for reports
+## Modules
+
+| Module         | Description                    | Default Url           |
+| -------------- | ------------------------------ | --------------------- |
+| eureka-server  | Eureka Discovery Server        | http://localhost:8761 |
+| admin-server   | Spring Boot Admin Server       | http://localhost:9090 |
+| zuul-server    | Zuul API Gateway Server        | http://localhost:9000 |
+| user-service   | User database REST API service | http://localhost:9110 |
+| task-service   | Task database REST API service | http://localhost:9120 |
+| report-service | Report REST API service        | http://localhost:9130 |
+
 
 Report service get data from Task and User services requesting real
 service endpoints in Service Discovery.
