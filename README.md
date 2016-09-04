@@ -1,6 +1,8 @@
 # Spring Boot Microservice Demo
 
-Project demonstrates String Boot Microservice architecture.
+Project demonstrates String Boot Microservice architecture and next patterns
+* Discovery Service
+* API Gateway
 
 ## Modules
 
@@ -12,6 +14,8 @@ Project demonstrates String Boot Microservice architecture.
 | `user-service`   | User database REST API service | http://localhost:9110 |
 | `task-service`   | Task database REST API service | http://localhost:9120 |
 | `report-service` | Report REST API service        | http://localhost:9130 |
+
+## Infrastructure modules
 
 ### Eureka Discovery Server
 
@@ -39,6 +43,8 @@ of the project.
 | `/api/user-service`   | `user-service`   |
 | `/api/task-service`   | `user-service`   |
 | `/api/report-service` | `report-service` |
+
+## Microservice modules
 
 ### User database REST API service
 
