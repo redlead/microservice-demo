@@ -10,3 +10,35 @@ Modules of project are Spring Boot applications:
 
 Report service get data from Task and User services requesting real
 service endpoints in Service Discovery.
+
+
+
+```
+
+  
+  
+  +----------------+                           +------------------+     +------------------+
+  |      Zuul      |       service info        |      Eureka      |     |    Spring Boot   |
+  |  Api  Gateway  |---------------------------| Discovery Server |-----|   Admin Server   |
+  |     Server     |                           |                  |     |                  |
+  +----------------+                           +------------------+     +------------------+
+           |                                            |||
+           | report data                                |||
+           |                                            |||
+           |                                            |||
+  +----------------+                                    |||
+  | Report Service |------------------------------------+||
+  +----------------+                                     || service &
+            | |                                          || registration
+            | |                                          || info
+            | | task data +----------------+             ||
+            | +-----------|  Task Service  |-------------+|
+            |             +----------------+              |
+            |                      |                      |
+            |                 ( Task DB )                 |
+            |   user data                        +----------------+
+            +------------------------------------|  User Service  |
+                                                 +----------------+
+                                                          |
+                                                     ( User DB )
+```

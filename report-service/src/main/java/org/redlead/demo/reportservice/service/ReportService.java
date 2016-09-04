@@ -29,9 +29,7 @@ public class ReportService implements IReportService{
         List<TaskReport> taskReportList = new ArrayList<>();
         tasks.forEach(task -> {
             User user = restTemplate.getForObject("http://USER-SERVICE/user/" + task.getUserKey(), User.class);
-            taskReportList.add(new TaskReport(
-                    task.getId(), task.getUserKey(), user.getFullName(), task.getText(), task.getStatus()
-            ));
+            taskReportList.add(new TaskReport(task.getId(), user, task.getText(), task.getStatus()));
         });
 
         return taskReportList;

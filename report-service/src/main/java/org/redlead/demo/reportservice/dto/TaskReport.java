@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 public class TaskReport {
 
     private Long id;
-    private String userKey;
-    private String userFullName;
+    private User user;
     private String text;
     private String status;
 
