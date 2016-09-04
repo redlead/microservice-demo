@@ -89,7 +89,7 @@ Example of task record
 
 ### Report REST API service
 
-Module `report-service` is report service. Only one demo report is 'All task
+Module `report-service` is report service. The only one demo report is 'All task
 report'. It lists all tasks and all user information in JSON format.
 Service uses method `GET /task` of `task-service` to get all tasks and
 `GET /user/{key}` of `user-service` to get uses information.
@@ -114,6 +114,31 @@ Example of 'All tasks report' data
   ...
 ]
 ```
+
+## How to build
+
+```
+mvn clean package
+```
+
+## How to run
+
+Use next command to run any module
+```
+java -jar {MODULE_NAME}\target\{MODULE-NAME}-{MODULE-VERSION}.jar
+```
+You can run more then one of each microservices. Use `--server.port={PORT}` to set port.
+
+Use `nohup` to run many modules in one console
+```
+nohup java -jar {MODULE_NAME}\target\{MODULE-NAME}-{MODULE-VERSION}.jar >/dev/null 2>&1 &
+```
+and `ps` and `kill` to stop modules
+```
+ps -fC java
+```
+
+
 
 
 ```
