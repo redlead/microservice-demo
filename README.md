@@ -142,40 +142,4 @@ Use `nohup` to run many modules in one console
 ```
 nohup java -jar {MODULE_NAME}\target\{MODULE-NAME}-{MODULE-VERSION}.jar >/dev/null 2>&1 &
 ```
-and `ps` and `kill` to stop modules
-```
-ps -fC java
-```
-
-
-
-
-```
-
-  
-  
-  +----------------+                           +------------------+     +------------------+
-  |      Zuul      |       service info        |      Eureka      |     |    Spring Boot   |
-  |  Api  Gateway  |---------------------------| Discovery Server |-----|   Admin Server   |
-  |     Server     |                           |                  |     |                  |
-  +----------------+                           +------------------+     +------------------+
-           |                                            |||
-           | report data                                |||
-           |                                            |||
-           |                                            |||
-  +----------------+                                    |||
-  | Report Service |------------------------------------+||
-  +----------------+                                     || service &
-            | |                                          || registration
-            | |                                          || info
-            | | task data +----------------+             ||
-            | +-----------|  Task Service  |-------------+|
-            |             +----------------+              |
-            |                      |                      |
-            |                 ( Task DB )                 |
-            |   user data                        +----------------+
-            +------------------------------------|  User Service  |
-                                                 +----------------+
-                                                          |
-                                                     ( User DB )
-```
+and `ps` and `kill` to list and stop modules.
