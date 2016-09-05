@@ -4,6 +4,8 @@ Project demonstrates String Boot Microservice architecture and next patterns
 * Discovery Service
 * API Gateway
 
+![Schema](https://github.com/redlead/microservice-demo/schema.jpg)
+
 ## Modules
 
 | Module           | Description                    | Default Url           |
